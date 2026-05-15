@@ -7,6 +7,7 @@
 ![PowerBI](https://img.shields.io/badge/PowerBI-Desktop-yellow?logo=powerbi)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-orange)
+
 <--
 [🔗 Live Demo (Streamlit)](https://your-ab-app.streamlit.app) • [📊 Dashboard Preview](./assets/ab_dashboard_preview.png)
 -->
@@ -40,7 +41,7 @@ This was a solo portfolio project. Key work I personally completed:
 
 | Source | Records | Key Metrics |
 |--------|---------|-------------|
-| [Marketing Campaign Dataset (Kaggle)](https://www.kaggle.com/datasets/roshansharma/marketing-campaign) *or synthetic generator* | ~5,000 users | `Variant` (A/B), `Converted` (0/1), `Revenue`, `Timestamp`, `Segment` |
+| [Marketing Campaign Dataset (Kaggle)](https://www.kaggle.com/datasets/mirzayasirabdullah07/marketing-campaign-performance-dataset)  | ~5,000 users | `Variant` (A/B), `Converted` (0/1), `Revenue`, `Timestamp`, `Segment` |
 
 ### 🔁 Reproducibility: Get the Data
 ```bash
