@@ -1,0 +1,30 @@
+experiment:
+  name: "SME_Cashback_Email_Test"
+  variant_split: [0.48, 0.52]  # Slight imbalance = realistic
+  experiment_rules:
+    minimum_runtime_days: 14
+    stopping_policy: "fixed_horizon"  # No peeking!
+    peeking_allowed: false
+    primary_metric: "conversion_rate"
+    guardrail_metrics: ["unsubscribe_rate"]
+
+statistics:
+  baseline_conversion: 0.12       # 12% baseline conversion
+  minimum_detectable_lift: 0.15   # Want to detect 15% relative lift
+  alpha: 0.05
+  power_target: 0.80
+  minimum_business_lift: 0.05     # Need at least 5% lift to be worthwhile
+
+data:
+  n_samples: 5000
+  seed: 42
+  segments: ["New_SME", "Established_SME", "Enterprise"]
+  revenue_lognormal_mean: 3.5
+  revenue_lognormal_sigma: 1.2
+  missing_revenue_rate: 0.02
+  guardrail_unsubscribe_rate: 0.03
+
+output:
+  save_raw: true
+  save_processed: true
+  results_format: "json"
